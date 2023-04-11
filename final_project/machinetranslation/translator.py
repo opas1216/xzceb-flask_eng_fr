@@ -26,6 +26,8 @@ language_translator.set_disable_ssl_verification(True)
 def englishToFrench(englishText):
     """This is the method for translate english to french."""
     #write the code here
+    if len(englishText) == 0:
+        return ""
     translation = language_translator.translate(
     text = englishText,
     model_id = 'en-fr').get_result()
@@ -36,6 +38,8 @@ def englishToFrench(englishText):
 def frenchToEnglish(frenchText):
     """This is the method for translate french to english."""
     #write the code here
+    if len(frenchText) == 0:
+        return ""
     translation = language_translator.translate(
     text = frenchText,
     model_id = 'fr-en').get_result()
